@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+</head>
+
+<body ng-app="starter">
+
+
+<ion-nav-bar class="bar-positive">
+  <ion-nav-back-button>
+    XDD
+  </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-nav-view></ion-nav-view>
+
+<script id="templates/tab.html" type="text/ng-template">
+  <ion-tabs class="tabs-icon-top tabs-positive">
+
+    <ion-tab title="Home" icon="ion-android-home" href="#/tab/home">
+      <ion-nav-view name="home-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Map" icon="ion-android-pin" href="#/tab/map">
+      <ion-nav-view name="map-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Setting" icon="ion-android-settings" href="#/tab/setting">
+      <ion-nav-view name="setting-tab"></ion-nav-view>
+    </ion-tab>
+
+  </ion-tabs>
+</script>
+
+
+<script id="templates/home.html" type="text/ng-template">
+  <ion-view title="Home Page">
+    <ion-content>
+
+      <!--HTML code-->
+      <h1>**XDD Coding**<br>ngGoogleMap</h1>
+      <p>Coding by JasonXDD</p>
+      <a class="button button-block button-positive" href="#/tab/server">
+        Look Server Data
+      </a>
+
+    </ion-content>
+  </ion-view>
+</script>
+
+
+<script id="templates/server.html" type="text/ng-template">
+  <ion-view title="Server Page">
+    <ion-content>
+
+      <!--HTML code-->
+      <h1>Server Data</h1>
+      <a class="button button-block button-positive" href="#/tab/home">
+        Back to Home
+      </a>
+
+    </ion-content>
+  </ion-view>
+</script>
+
+
+<script id="templates/map.html" type="text/ng-template">
+  <ion-view title="Map Page">
+    <ion-content>
+
+      <!--HTML code-->
+      <h1>Map Data</h1>
+
+    </ion-content>
+  </ion-view>
+</script>
+
+
+<script id="templates/setting.html" type="text/ng-template">
+  <ion-view title="Setting Page">
+    <ion-content>
+
+      <!--HTML code-->
+      <h1>Setting Data</h1>
+
+      <label class="item item-input">
+        <span class="input-label">Latitude</span>
+        <input type="text">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Longitude</span>
+        <input type="text">
+      </label>
+
+      <a class="button button-block button-positive" href="#/tab/home">
+        Go to Map
+      </a>
+
+    </ion-content>
+  </ion-view>
+</script>
+
+
+</body>
+
+</html>
